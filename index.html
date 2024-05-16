@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to Skiing Holiday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+        .countdown-container {
+            text-align: center;
+        }
+        .countdown {
+            font-size: 2em;
+        }
+        .image-container {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Countdown to</h1>
+        <h1>Ski Wankers Annual</h1>
+        <div id="countdown" class="countdown"></div>
+        <div class="image-container">
+            <img id="holiday-image" src="data:image/png;base64,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" alt="Skiing Holiday">
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const holidayDate = new Date('January 4, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeDifference = holidayDate - now;
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (timeDifference < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = "The holiday has started!";
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
